@@ -1,0 +1,520 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+
+    grid-template:
+        [header-left]"header header header" auto [header-right]
+        [main-left] "main main main" 600px[main-left]
+        [footer-left]"footer footer footer" 300px[footer-right]
+        / 0.5fr 1fr 0.5fr;
+    grid-gap: 10px;
+
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+header {
+    grid-area: header;
+    background-color: #402E7A;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 0.5fr 2fr 0.8fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+
+}
+
+.logo {
+    font-size: 3rem;
+    margin: 10px 0px 0px 10px;
+    background-color: #555555;
+    max-height: max-content;
+    max-width: max-content;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.pagina_titel {
+    grid-area: 2 / 3 / 3 / 6;
+}
+
+nav {
+    grid-area: 3 / 1 / 5 / 8;
+}
+
+header > div {
+    color: #F5F7F8;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.pagina_titel h1 {
+    margin: 0;
+    padding: 0;
+
+}
+
+.pagina_titel h1, .pagina_titel h3 {
+    margin: 0;
+    padding: 0;
+
+    font-weight: 600;
+}
+
+nav {
+    background-color: #4C3BCF;
+    border-radius: 10px;
+    padding: 5px;
+
+
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    align-items: center;
+
+
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #F5F7F8;
+
+    padding: 10px 30px;
+
+    &:hover {
+        border-radius: 30px;
+        background-color: #E5D9F2;
+
+
+    }
+}
+
+.logo {
+
+}
+
+.pagina_titel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_header1 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+main {
+    grid-area: main;
+    background-color: #4B70F5;
+}
+
+
+
+.contact_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #F5F7F8;
+
+    footer {
+
+        color: #fff;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-container div {
+        flex: 1;
+        margin: 10px;
+        min-width: 200px;
+        font-size: 15px;
+    }
+
+    .footer-about,
+    .footer-links,
+    .footer-contact {
+        text-align: center;
+    }
+
+    .footer-about h3,
+    .footer-links h3,
+    .footer-contact h3 {
+        margin-bottom: 15px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+
+    .footer-about p,
+    .footer-contact p {
+        font-size: 14px;
+    }
+
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .footer-links ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links ul li a {
+        color: black;
+        text-decoration: none;
+        padding: 10px;
+        min-width: 100px;
+    }
+
+    .footer-links ul li a:hover {
+        background-color: rgba(150, 217, 220, 0.95);
+        border-radius: 30px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid #555;
+        margin-top: 20px;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        font-size: 10px;
+    }
+
+}
+
+.admin_dashboard, .contact-main, .project_main{
+    overflow: scroll;
+}
+
+.project-p{
+    /*border-style: solid;*/
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+tbody tr:hover {
+    background-color: #c5c2c2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+th {
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
+}
+
+td {
+    font-family: 'Georgia', serif;
+    color: #333;
+}
+
+table caption {
+    caption-side: top;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form ,.login-form{
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    font-family: 'Georgia', serif;
+}
+
+form{
+   width: 40%;
+}
+
+.cform{
+    width: 80%;
+}
+
+.login-form{
+    width: 40%;
+}
+
+.inloggen_titel{
+    text-align: center;
+}
+
+.login_knop{
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+button {
+    width: 80%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+
+}
+.save-button{
+    width: 100%;
+}
+.form-button{
+    display: inline;
+}
+
+.verwijder{
+    background-color: red;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+textarea {
+    resize: vertical;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+form button:focus,
+input[type="text"]:focus,
+textarea:focus {
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.intro-mainpage{
+    margin: 20px;
+    padding: 20px;
+    color: white;
+}
+
+/*voor bericht na invullen contactformulier*/
+.message {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #45a049;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 50%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Project cards */
+.card {
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade effect */
+.fade {
+    animation: fadeEffect 1.5s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Hover effect */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/*over-mij page*/
+
+
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    color: white;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.kaart {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    text-align: left;
+}
+
+.kaart h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.card p {
+    font-size: 1em;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*project pagina weergave projecten*/
+.projecten_container, .projecten_section{
+    text-align: center;
+}
+
+
+
+
+
+
